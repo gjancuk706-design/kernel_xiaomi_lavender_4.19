@@ -18,18 +18,13 @@ jobs:
       uses: lemniskett/android-kernel-actions@master
       id: build
       env:
-        NAME: nexus kernel xiomi lavender
+        NAME: predator strom breaker
       with:
         arch: arm64
         compiler: clang/12
         defconfig: lavender_defconfig
         image: Image.gz-dtb
-    
-    - name: Log directory structure to find the module
-      run: |
-        find . -type f -name "*.ko"
-        find . -type d
-  
+
     - name: Upload Kernel and Module
       uses: actions/upload-artifact@v4
       with:
