@@ -22,7 +22,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/12
-        defconfig: defconfig
+        defconfig: lavender_defconfig
         image: Image.gz-dtb
 
     - name: Upload Kernel and Module
@@ -31,4 +31,4 @@ jobs:
         name: module
         path: |
           ${{ steps.build.outputs.outfile }}
-          ./out/drivers/memkernel/memkernel.ko 
+          ./out/drivers/memkernel/memkernel.ko
